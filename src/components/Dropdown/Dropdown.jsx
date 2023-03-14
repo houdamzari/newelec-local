@@ -1,9 +1,10 @@
 import { useState, useCallback } from "react";
 import Flex from "../Flex/Flex";
-
+import useClickOutside from "../../hooks/useClickOutside";
 function Dropdown({ label, addNewAvailable, optional, dropdownOptions }) {
   const [optionSelected, setOptionSelected] = useState(dropdownOptions[0]);
   const [open, setOpen] = useState(false);
+  const ref = useClickOutside(() => setOpen(false));
   const handleSelectOption = useCallback(
     (i) => {
       setOptionSelected(dropdownOptions[i]);
@@ -23,7 +24,7 @@ function Dropdown({ label, addNewAvailable, optional, dropdownOptions }) {
         {optional && <p>Optional</p>}
       </Flex>
 
-      <div className="relative">
+      <div className="relative" ref={ref}>
         <div
           onClick={() => setOpen(!open)}
           className="flex flex-row justify-between border-2 cursor-pointer rounded-md px-4 py-2"
@@ -40,12 +41,12 @@ function Dropdown({ label, addNewAvailable, optional, dropdownOptions }) {
         </div>
 
         {open && (
-          <div className="absolute top-[40px] w-full bg-white left-0 z-[9999]">
+          <div className="absolute top-[40px] w-full bg-white border-2 left-0 z-[9999]">
             {dropdownOptions.map((option, i) => (
               <div
                 key={option.option}
                 onClick={() => handleSelectOption(i)}
-                className="flex flex-row justify-between border-2 cursor-pointer rounded-md px-4 py-2"
+                className="flex flex-row justify-between  cursor-pointer rounded-md px-4 py-2"
               >
                 <Flex flexDirection="flex-row" gap="gap-[10px]">
                   <img
