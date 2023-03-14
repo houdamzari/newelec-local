@@ -1,9 +1,16 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Flex from "../Flex/Flex";
 
 function Dropdown({ label, addNewAvailable, optional, dropdownOptions }) {
   const [optionSelected, setOptionSelected] = useState(dropdownOptions[0]);
   const [open, setOpen] = useState(false);
+  const handleSelectOption = useCallback(
+    (i) => {
+      setOptionSelected(dropdownOptions[i]);
+      setOpen(false);
+    },
+    [optionSelected]
+  );
   return (
     <div className="w-full">
       <Flex
@@ -33,11 +40,11 @@ function Dropdown({ label, addNewAvailable, optional, dropdownOptions }) {
         </div>
 
         {open && (
-          <div className="absolute top-[40px] w-full bg-white left-0">
+          <div className="absolute top-[40px] w-full bg-white left-0 z-[9999]">
             {dropdownOptions.map((option, i) => (
               <div
                 key={option.option}
-                onClick={() => setOptionSelected(dropdownOptions[i])}
+                onClick={() => handleSelectOption(i)}
                 className="flex flex-row justify-between border-2 cursor-pointer rounded-md px-4 py-2"
               >
                 <Flex flexDirection="flex-row" gap="gap-[10px]">
