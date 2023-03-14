@@ -1,6 +1,5 @@
-import styles from "./Navbar.module.css";
 function Navbar() {
-  return <div className={styles.navbar}>Navbar</div>;
+  return <div className="bg-red-400">Navbar</div>;
 }
 
 export default Navbar;

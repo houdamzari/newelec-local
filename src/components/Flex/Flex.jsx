@@ -8,14 +8,17 @@ function Flex({
 }) {
   return (
     <div
-      style={{
-        display: "flex",
-        flexDirection: flexDirection,
-        flexWrap: flexWrap,
-        justifyContent: justifyContent,
-        alignItems: alignItems,
-        gap: gap,
-      }}
+      className={`flex ${
+        flexDirection +
+        " " +
+        flexWrap +
+        " " +
+        justifyContent +
+        " " +
+        alignItems +
+        " " +
+        gap
+      }`}
     >
       {children}
     </div>

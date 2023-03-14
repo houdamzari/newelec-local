@@ -4,16 +4,16 @@ import Flex from "../Flex/Flex";
 function TitleSection() {
   return (
     <Flex
-      flexDirection={"row"}
-      justifyContent={"space-between"}
-      alignItems={"center"}
+      flexDirection={"flex-row"}
+      justifyContent={"justify-between"}
+      alignItems={"items-center"}
     >
       <h1>Edit Training "Working At Height"</h1>
       <Flex
-        flexDirection={"row"}
-        justifyContent={"center"}
-        alignItems={"center"}
-        gap={"10px"}
+        flexDirection={"flex-row"}
+        justifyContent={"justify-center"}
+        alignItems={"items-center"}
+        gap={"gap-[10px]"}
       >
         <Button secondary />
         <Button primary />
