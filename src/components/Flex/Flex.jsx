@@ -4,11 +4,14 @@ function Flex({
   flexWrap,
   justifyContent,
   alignItems,
+  className,
   gap,
 }) {
   return (
     <div
       className={`flex ${
+        className +
+        " " +
         flexDirection +
         " " +
         flexWrap +

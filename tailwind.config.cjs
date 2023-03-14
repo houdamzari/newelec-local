@@ -3,10 +3,11 @@ module.exports = {
   mode: "jit",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
       colors: {
-      grey: '#F6F6F6'
-    }
+        grey: "#F6F6F6",
+      },
+    },
   },
   plugins: [],
 };

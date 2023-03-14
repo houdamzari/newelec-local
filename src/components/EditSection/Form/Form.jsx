@@ -10,6 +10,7 @@ function Form() {
   return (
     <div>
       <Flex
+        className="w-full"
         flexDirection={"flex-row"}
         justifyContent={"justify-start"}
         alignItems={"items-center"}
