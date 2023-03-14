@@ -7,7 +7,7 @@ function FileForm() {
       <p>Training file</p>
       <FileInput />
       <p className="mt-8 text-sm text-grey">
-        Only JPG, PNG files are allowed. Image must be less than 2MB
+        Only Video, PDF and SlideShow files are allowed
       </p>
     </div>
   );
