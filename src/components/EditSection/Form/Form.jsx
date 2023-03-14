@@ -1,6 +1,6 @@
 import React from "react";
 import Dropdown from "../../Dropdown/Dropdown";
-import upload from "../../../assets/upload-icon.svg";
+import upload from "../../../assets/img/upload-icon.svg";
 import Flex from "../../Flex/Flex";
 function Form() {
   const category = [
