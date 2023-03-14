@@ -7,7 +7,7 @@ function FileForm() {
       <p>Training file</p>
       <FileInput />
       <p className="mt-8 text-sm text-grey">
-        Only Video, PDF and SlideShow files are allowed
+        *Only Video, PDF and SlideShow files are allowed
       </p>
     </div>
   );
