@@ -1,7 +1,7 @@
 function Navbar() {
-  return (<nav className="bg-red-400">
+  return (<nav className="bg-grey">
     <img src="" alt="" />
-    <ul></ul>
+    <ul>dd</ul>
   </nav>);
 }
 
