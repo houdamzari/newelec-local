@@ -16,17 +16,14 @@ function LanguageDropdown({dropdownOptions}) {
       <div className="relative">
         <div
           onClick={() => setOpen(!open)}
-          className="flex flex-row justify-between border-2 cursor-pointer rounded-md px-4 py-2"
+          className="border-2 cursor-pointer rounded-full  py-2 bg-red-400"
         >
-          <Flex flexDirection="flex-row " gap="gap-[10px]">
             <img
               className="w-[30px]"
               src={optionSelected.icon}
               alt="option_icon"
             />
             {optionSelected.option}
-          </Flex>
-          <p className="rotate-[-90deg] ">&#10094;</p>
         </div>
 
         {open && (

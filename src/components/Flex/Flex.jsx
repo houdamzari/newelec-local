@@ -6,9 +6,11 @@ function Flex({
   alignItems,
   className,
   gap,
+  onClick,
 }) {
   return (
     <div
+      onClick={() => (onClick ? onClick() : null)}
       className={`flex ${
         className +
         " " +

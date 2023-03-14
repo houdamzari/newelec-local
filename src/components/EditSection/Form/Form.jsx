@@ -10,7 +10,7 @@ function Form() {
   return (
     <div>
       <Flex
-        className="w-full"
+        className="w-[30rem]"
         flexDirection={"flex-row"}
         justifyContent={"justify-start"}
         alignItems={"items-center"}
@@ -32,18 +32,27 @@ function Form() {
       <Flex
         flexDirection={"flex-row"}
         justifyContent={"justify-start"}
-        alignItems={"items-center"}
+        alignItems={"items-start"}
         gap={"gap-[10px]"}
       >
         <Flex
           flexDirection={"flex-col"}
-          justifyContent={"justify-start"}
+          justifyContent={"justify-center"}
           alignItems={"items-center"}
           gap={"gap-[10px]"}
         >
-          <Dropdown label="Training" dropdownOptions={category} />
-          <Dropdown label="Assign To" dropdownOptions={category} />
+          <Dropdown label="Training" optional dropdownOptions={category} />
+          <Dropdown label="Assign To" optional dropdownOptions={category} />
         </Flex>
+        <div>
+          <p>Description</p>
+          <textarea
+            name="description"
+            className="border-2 border-grey rounded-md"
+            cols="40"
+            rows="5"
+          ></textarea>
+        </div>
       </Flex>
     </div>
   );
