@@ -1,5 +1,5 @@
 import React from 'react';
-import searchIcon from '../../assets/searchIcon.svg'
+import searchIcon from '../../assets/img/searchIcon.svg'
 function SearchBar(props) {
   return (
     <div className="bg-grey flex flex-row items-center justify-start

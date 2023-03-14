@@ -1,15 +1,16 @@
 import SearchBar from "../SearchBar/SearchBar";
-import logo from '../../assets/logo.svg'
-import notification from '../../assets/notification-bell.svg'
+import logo from '../../assets/img/logo.svg'
+import notification from '../../assets/img/notification-bell.svg'
 import { Link } from "react-router-dom";
 import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
+
 function Navbar() {
   const languages = [
-    { icon: upload, name: "English(EN)" },
-    { icon: upload, name: "Francais(FR)" },
-    { icon: upload, name: "Nederlands(NL)" },
-    { icon: upload, name: "Espanol(ES)" },
-    { icon: upload, name: "Deutsch(DE)" },
+    { icon: 'upload', name: "English(EN)" },
+    { icon: 'upload', name: "Francais(FR)" },
+    { icon: 'upload', name: "Nederlands(NL)" },
+    { icon: 'upload', name: "Espanol(ES)" },
+    { icon: 'upload', name: "Deutsch(DE)" },
   ];
   const routes = [
    

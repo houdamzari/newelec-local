@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-
+import Flex from "../Flex/Flex";
 function LanguageDropdown({dropdownOptions}) {
  const [optionSelected, setOptionSelected] = useState(dropdownOptions[0]);
   const [open, setOpen] = useState(false);
@@ -38,11 +38,11 @@ function LanguageDropdown({dropdownOptions}) {
                 className="flex flex-row justify-between border-2 cursor-pointer rounded-md px-4 py-2"
               >
                 <Flex flexDirection="flex-row" gap="gap-[10px]">
-                  <img
+                  {/* <img
                     className="w-[30px]"
                     src={option.icon}
                     alt="option_icon"
-                  />
+                  /> */}
                   {option.option}
                 </Flex>
               </div>
