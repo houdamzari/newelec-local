@@ -1,35 +1,47 @@
 import React from "react";
 import Dropdown from "../../Dropdown/Dropdown";
-import upload from "../../../assets/img/upload-icon.svg";
 import Flex from "../../Flex/Flex";
+import { FirstForm } from "./data";
+import FormInput from "../../FormInput/FormInput";
 function Form() {
-  const category = [
-    { icon: upload, option: "Safety" },
-    { icon: upload, option: "Life" },
-  ];
   return (
     <div>
       <Flex
-        className="w-[30rem]"
+        className="w-full"
         flexDirection={"flex-row"}
         justifyContent={"justify-start"}
         alignItems={"items-center"}
         gap={"gap-[10px]"}
       >
-        <Dropdown label="Category" addNewAvailable dropdownOptions={category} />
-        <Dropdown label="Topic" addNewAvailable dropdownOptions={category} />
-        <Dropdown label="Valid For" dropdownOptions={category} />
+        {FirstForm.map((element) => (
+          <Dropdown
+            key={element.label}
+            label={element.label}
+            className={element.width}
+            addNewAvailable={element.addNewAvailable}
+            dropdownOptions={element.data}
+          />
+        ))}
       </Flex>
       <Flex
+        className={"mt-[17px]"}
         flexDirection={"flex-row"}
         justifyContent={"justify-start"}
         alignItems={"items-center"}
         gap={"gap-[10px]"}
       >
-        <Dropdown label="Training" dropdownOptions={category} />
-        <Dropdown label="Assign To" dropdownOptions={category} />
+        <FormInput />
+        <Dropdown
+          className="w-[35%]"
+          label="Assign To"
+          dropdownOptions={[
+            { option: "internal worker" },
+            { option: "external worker" },
+          ]}
+        />
       </Flex>
       <Flex
+        className={"mt-[17px]"}
         flexDirection={"flex-row"}
         justifyContent={"justify-start"}
         alignItems={"items-start"}
@@ -39,18 +51,32 @@ function Form() {
           flexDirection={"flex-col"}
           justifyContent={"justify-center"}
           alignItems={"items-center"}
-          gap={"gap-[10px]"}
+          gap={"gap-[13px]"}
         >
-          <Dropdown label="Training" optional dropdownOptions={category} />
-          <Dropdown label="Assign To" optional dropdownOptions={category} />
+          <Dropdown
+            className={"w-[167px]"}
+            label="Departments"
+            optional
+            dropdownOptions={[
+              { option: "departement1" },
+              { option: "departement2" },
+            ]}
+          />
+          <Dropdown
+            label="Functions"
+            optional
+            dropdownOptions={[{ option: "function1" }, { option: "function2" }]}
+          />
         </Flex>
         <div>
-          <p>Description</p>
+          <p className="text-sm font-semibold text-textColor-grey">
+            Description
+          </p>
           <textarea
             name="description"
-            className="border-2 border-grey rounded-md"
+            placeholder="Type here..."
+            className="border-2 h-[126px] border-grey rounded-md mt-[8px] placeholder:italic placeholder:text-textColor-grey placeholder:text-sm p-[10px] "
             cols="40"
-            rows="5"
           ></textarea>
         </div>
       </Flex>
