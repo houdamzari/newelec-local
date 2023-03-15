@@ -1,7 +1,15 @@
 import { useState, useCallback } from "react";
 import Flex from "../Flex/Flex";
 import useClickOutside from "../../hooks/useClickOutside";
-function Dropdown({ label, addNewAvailable, optional, dropdownOptions,dropdownIcon }) {
+import { arrow } from "../../assets";
+function Dropdown({
+  label,
+  addNewAvailable,
+  optional,
+  dropdownOptions,
+  dropdownIcon,
+  className,
+}) {
   const [optionSelected, setOptionSelected] = useState(dropdownOptions[0]);
   const [open, setOpen] = useState(false);
   const ref = useClickOutside(() => setOpen(false));
@@ -13,7 +21,9 @@ function Dropdown({ label, addNewAvailable, optional, dropdownOptions,dropdownIc
     [optionSelected]
   );
   return (
-    <div className={`w-full text-sm font-semibold ${className}`}>
+    <div
+      className={`w-full text-sm font-semibold ${className ? className : ""}`}
+    >
       <Flex
         flexDirection={"flex-row"}
         justifyContent={"justify-between"}
@@ -53,12 +63,14 @@ function Dropdown({ label, addNewAvailable, optional, dropdownOptions,dropdownIc
                 className="flex flex-row justify-between  cursor-pointer rounded-md px-4 py-2"
               >
                 <Flex flexDirection="flex-row" gap="gap-[10px]">
-                  {icon &&  <img
-                    className="w-[30px]"
-                    src={option.icon}
-                    alt="option_icon"
-                  />}
-                 
+                  {icon && (
+                    <img
+                      className="w-[30px]"
+                      src={option.icon}
+                      alt="option_icon"
+                    />
+                  )}
+
                   {option.option}
                 </Flex>
               </div>
