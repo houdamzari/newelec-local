@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
 import { logo, notification, germany, english, nederlands, spain, france, settingsIcon, policies, greyArrow ,arrow} from '../../assets'
 import { Link } from "react-router-dom";
@@ -45,15 +45,17 @@ function Navbar() {
       justifyContent={"justify-between"}
       alignItems={"items-center"}
       gap={"gap-[10px]"}
-      className=' px-16'>
-      <img src={logo} alt="logo-newelec"  className="w-fit "/>
+      className=" px-16"
+    >
+      <img src={logo} alt="logo-newelec" className="w-fit " />
 
-      <Flex flexDirection={"flex-row"}
+      <Flex
+        flexDirection={"flex-row"}
         justifyContent={"justify-start"}
         alignItems={"items-center"}
-              className='w-[60%]'
-
-        gap={"gap-8"}>
+        className="w-[60%]"
+        gap={"gap-8"}
+      >
         <SearchBar />
          <ul className="flex flex-row items-center gap-4 w-fit ">
           {routes.map(element => (<li key={element}><Link to={element.path}><button onClick={() => setActive(!active)} className={` ${location.pathname === element.path ? 'text-textColor-blue' : 'text-textColor-lightGrey'}`} >{element.name}</button></Link></li>))}
@@ -66,12 +68,14 @@ function Navbar() {
 </li>
       </ul>
       </Flex>
-     
-      <Flex flexDirection={"flex-row"}
+
+      <Flex
+        flexDirection={"flex-row"}
         justifyContent={"justify-between"}
         alignItems={"items-center"}
-        gap={"gap-[15px]"}>
-        <img src={notification} alt="notification" className="w-6"/>
+        gap={"gap-[15px]"}
+      >
+        <img src={notification} alt="notification" className="w-6" />
         <LanguageDropdown dropdownOptions={languages} />
         <SettingsDropdown dropdownOptions={settings} />
       </Flex>
