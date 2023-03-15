@@ -14,7 +14,9 @@ function Dropdown({ label, addNewAvailable, optional, dropdownOptions,borderless
     [optionSelected]
   );
   return (
-    <div className={`w-full text-sm font-semibold ${className}`}>
+    <div
+      className={`w-full text-sm font-semibold ${className ? className : ""}`}
+    >
       <Flex
         flexDirection={"flex-row"}
         justifyContent={"justify-between"}

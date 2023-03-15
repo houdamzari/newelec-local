@@ -22,23 +22,22 @@ function Navbar() {
   ];
   const  [open, setOpen] = useState(false);
   const routes = [
-
     {
-      path: 'dashboard',
-      name: 'Dashboard'
+      path: "dashboard",
+      name: "Dashboard",
     },
     {
-      path: '/',
-      name: 'Trainings'
+      path: "/",
+      name: "Trainings",
     },
     {
-      path: '/users',
-      name: 'Users'
+      path: "/users",
+      name: "Users",
     },
-
-  ]
+  ];
   return (
-    <Flex flexDirection={"flex-row"}
+    <Flex
+      flexDirection={"flex-row"}
       justifyContent={"justify-between"}
       alignItems={"items-center"}
       gap={"gap-[10px]"}
@@ -73,7 +72,6 @@ function Navbar() {
         <SettingsDropdown dropdownOptions={settings} />
       </Flex>
     </Flex>
-    
   );
 }
 
