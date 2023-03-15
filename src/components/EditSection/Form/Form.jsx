@@ -73,7 +73,7 @@ function Form() {
           <textarea
             name="description"
             placeholder="Type here..."
-            className="border-2 h-[126px] border-grey rounded-md mt-[8px] placeholder:italic placeholder:text-textColor-grey placeholder:text-sm p-[10px] "
+            className="border-2 w-full h-[112px] border-grey rounded-md mt-[8px] placeholder:italic placeholder:text-textColor-grey placeholder:text-sm p-[10px] "
             cols="40"
           ></textarea>
         </div>

@@ -11,7 +11,7 @@ function QuestionBox({ data }) {
     <Flex
       className={"bg-[#F8F8F8] rounded-md px-[30px] py-[23px] mt-[17px]"}
       flexDirection="flex-row"
-      justifyContent="justify-center"
+      justifyContent="justify-between"
       gap={"gap-[38px]"}
     >
       <Flex flexDirection={"flex-col"} gap={"gap-[10px]"}>
