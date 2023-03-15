@@ -20,3 +20,11 @@
 .clip {
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
+
+.swiper-scrollbar-drag {
+  background-color: #2C8EFF !important;
+}
+
+.swiper-scrollbar {
+  bottom: 0px !important;
+}
