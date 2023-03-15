@@ -8,3 +8,6 @@ export { default as nederlands } from "./img/nederlands.svg";
 export { default as spain } from "./img/spain.svg";
 export { default as france } from "./img/france.svg";
 export { default as english } from "./img/english.svg";
+export { default as logoutIcon } from "./img/logoutIcon.svg";
+export { default as policies } from "./img/policies.svg";
+export { default as settingsIcon } from "./img/settingsIcon.svg";
