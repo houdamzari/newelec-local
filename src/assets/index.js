@@ -16,3 +16,4 @@ export { default as deleteIcon } from "./img/delete.svg";
 export { default as logoutIcon } from "./img/logoutIcon.svg";
 export { default as policies } from "./img/policies.svg";
 export { default as settingsIcon } from "./img/settingsIcon.svg";
+export { default as greyArrow } from "./img/greyArrow.svg";
