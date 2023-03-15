@@ -4,7 +4,7 @@ import { FormInput, Flex, Dropdown } from "../../../components";
 
 function Form() {
   return (
-    <div>
+    <div className="h-[338px]">
       <Flex
         className="w-full"
         flexDirection={"flex-row"}
