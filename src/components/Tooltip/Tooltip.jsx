@@ -11,12 +11,12 @@ function Tooltip({ children, content }) {
       >
         {children}
       </div>
-      {
+      {hovered && (
         <div className="absolute top-[15px] left-[-45px] w-[100px] flex justify-center items-center flex-col z-[999999] shadow-lg">
           <div className="clip w-[10px] h-[10px] bg-white"></div>
           <p className="text-[10px] bg-white  p-[5px] ">{content}</p>
         </div>
-      }
+      )}
     </div>
   );
 }
