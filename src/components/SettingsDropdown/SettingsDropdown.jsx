@@ -21,7 +21,6 @@ function SettingsDropdown({ dropdownOptions }) {
         gap="gap-[10px]"
         className="cursor-pointer">
             <img
-               className="w-[32px]"
               src={user}
               alt="option_icon"
             />
@@ -36,7 +35,7 @@ function SettingsDropdown({ dropdownOptions }) {
           </div>
 
           {open && (
-            <div className="absolute top-[60px] w-[200px] bg-white left-0 rounded flex flex-col ">
+            <div className="absolute top-[60px] w-[200px] bg-white left-0 rounded flex flex-col shadow-md">
               <div className="p-2">
                 <div className="font-bold text-xs ">BESIX Group</div>
                 <span className="text-gray-500 text-xs  border-black w-full ">besix.group@besix.be</span>

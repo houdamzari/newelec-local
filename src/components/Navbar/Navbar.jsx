@@ -1,11 +1,14 @@
+import { useState } from 'react'
 import SearchBar from "../SearchBar/SearchBar";
-import { logo, notification, germany, english, nederlands, spain, france, settingsIcon, policies, logoutIcon } from '../../assets'
+import { logo, notification, germany, english, nederlands, spain, france, settingsIcon, policies, logoutIcon ,arrow} from '../../assets'
 import { Link } from "react-router-dom";
 import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
 import SettingsDropdown from "../SettingsDropdown/SettingsDropdown";
 import Flex from "../Flex/Flex";
 import Dropdown from "../Dropdown/Dropdown";
+import useClickOutside from "../../hooks/useClickOutside";
 function Navbar() {
+  const ref = useClickOutside(()=> setOpen(false))
   const languages = [
     { icon: english, name: "English(EN)" },
     { icon: france, name: "Francais(FR)" },
@@ -14,14 +17,10 @@ function Navbar() {
     { icon: germany, name: "Deutsch(DE)" },
   ];
   const settings = [
-  const settings = [
     { icon: settingsIcon, name: "Profile settings" },
     { icon: policies, name: "Our policies" },
   ];
-  const category = [
-    { icon: '', option: "Lorem" },
-    { icon: '', option: "Lorem" },
-  ];
+  const  [open, setOpen] = useState(false);
   const routes = [
 
     {
@@ -44,24 +43,31 @@ function Navbar() {
       alignItems={"items-center"}
       gap={"gap-[10px]"}
       className=' px-16'>
+      <img src={logo} alt="logo-newelec"  className="w-fit "/>
+
       <Flex flexDirection={"flex-row"}
         justifyContent={"justify-start"}
         alignItems={"items-center"}
-              className='bg-green-400 px-16'
+              className='w-[60%]'
 
-        gap={"gap-[10px]"}>
-        <img src={logo} alt="logo-newelec" />
+        gap={"gap-8"}>
         <SearchBar />
-      </Flex>
-      <ul className="flex flex-row items-center justify-center gap-4">
+         <ul className="flex flex-row items-center gap-4 w-fit ">
         {routes.map(element => (<li key={element}><Link to={element.path}>{element.name}</Link></li>))}
-        <li>More</li>
-         <Dropdown label="More" dropdownOptions={category}  />
+        <li ref={ref}>
+          <button className="flex flex-row items-center gap-2 justify-center" onClick={()=>setOpen(!open)}>More <img src={arrow} alt="arrow" /></button>
+         {open && <div className="absolute top-12 bg-white p-3 rounded shadow-md">
+            <div>Option 1</div>
+            <div>Option 2</div>
+          </div>}
+</li>
       </ul>
+      </Flex>
+     
       <Flex flexDirection={"flex-row"}
         justifyContent={"justify-between"}
         alignItems={"items-center"}
-        gap={"gap-[10px]"}>
+        gap={"gap-[15px]"}>
         <img src={notification} alt="notification" className="w-6"/>
         <LanguageDropdown dropdownOptions={languages} />
         <SettingsDropdown dropdownOptions={settings} />

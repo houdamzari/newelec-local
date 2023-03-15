@@ -13,7 +13,6 @@ function LanguageDropdown({dropdownOptions}) {
           className=" cursor-pointer rounded-full w-fit py-2 "
         >
             <img
-               className="w-[42px]"
               src={optionSelected.icon}
               alt="option_icon"
             />
@@ -21,7 +20,7 @@ function LanguageDropdown({dropdownOptions}) {
         </div>
 
         {open && (
-          <div className="absolute top-[60px] w-fit rounded bg-white left-0">
+          <div className="absolute top-[60px] w-fit rounded bg-white left-0 shadow-md z-[999]">
             {dropdownOptions.map((option, i) => (
               <div
                 key={option.name}

@@ -1,7 +1,8 @@
 import { useState, useCallback } from "react";
 import Flex from "../Flex/Flex";
 import useClickOutside from "../../hooks/useClickOutside";
-function Dropdown({ label, addNewAvailable, optional, dropdownOptions,dropdownIcon }) {
+import { arrow } from "../../assets";
+function Dropdown({ label, addNewAvailable, optional, dropdownOptions,borderless ,className}) {
   const [optionSelected, setOptionSelected] = useState(dropdownOptions[0]);
   const [open, setOpen] = useState(false);
   const ref = useClickOutside(() => setOpen(false));
@@ -29,7 +30,7 @@ function Dropdown({ label, addNewAvailable, optional, dropdownOptions,dropdownIc
       <div className="relative mt-[8px]" ref={ref}>
         <div
           onClick={() => setOpen(!open)}
-          className="flex flex-row justify-between border-2 cursor-pointer rounded-md px-[12px] py-[9px]"
+          className={`flex flex-row justify-between cursor-pointer rounded-md px-[12px] py-[9px] ${borderless ? 'border-0' : 'border-2'} `}
         >
           <Flex flexDirection="flex-row " gap="gap-[10px]">
             {optionSelected.icon && (
@@ -53,7 +54,7 @@ function Dropdown({ label, addNewAvailable, optional, dropdownOptions,dropdownIc
                 className="flex flex-row justify-between  cursor-pointer rounded-md px-4 py-2"
               >
                 <Flex flexDirection="flex-row" gap="gap-[10px]">
-                  {icon &&  <img
+                  {option.icon &&  <img
                     className="w-[30px]"
                     src={option.icon}
                     alt="option_icon"
