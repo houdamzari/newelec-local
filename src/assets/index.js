@@ -28,3 +28,4 @@ export { default as plus } from "./img/plus.svg";
 export { default as left } from "./img/left.svg";
 export { default as right } from "./img/right.svg";
 export { default as greyArrow } from "./img/greyArrow.svg";
+export { default as checkmark } from "./img/checkmark.svg";
