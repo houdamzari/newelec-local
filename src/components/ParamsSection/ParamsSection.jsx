@@ -6,7 +6,7 @@ import "swiper/css";
 function ParamsSection() {
   return (
     <div className="w-full flex justify-center">
-      <Swiper className="w-[1181px]" spaceBetween={20} slidesPerView={6}>
+      <Swiper className="w-[1140px]" spaceBetween={20} slidesPerView={6}>
         {data.map((el) => (
           <SwiperSlide className="w-full" key={el.label}>
             <ParamCard data={el} />

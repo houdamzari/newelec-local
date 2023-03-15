@@ -11,3 +11,12 @@
 :root {
   background-color: #F8FAFD;
 }
+
+.swiper-slide {
+  position: relative;
+  z-index: 1;
+}
+
+.clip {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
