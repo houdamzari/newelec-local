@@ -1,22 +1,23 @@
-import React,{useState} from 'react';
+import React, { useState } from "react";
 import Flex from "../Flex/Flex";
 import useClickOutside from "../../hooks/useClickOutside";
-function LanguageDropdown({dropdownOptions}) {
- const [optionSelected, setOptionSelected] = useState(dropdownOptions[0]);
+function LanguageDropdown({ dropdownOptions }) {
+  const [optionSelected, setOptionSelected] = useState(dropdownOptions[0]);
   const [open, setOpen] = useState(false);
-  const ref = useClickOutside(()=> setOpen(false))
+  const ref = useClickOutside(() => setOpen(false));
   return (
-    <div className="w-fit ">
+    <div className="w-fit mobile:hidden">
       <div className="relative w-fit" ref={ref}>
         <div
           onClick={() => setOpen(!open)}
           className=" cursor-pointer rounded-full w-fit py-2 "
         >
-            <img
-              src={optionSelected.icon}
-              alt="option_icon"
-            />
-            {optionSelected.option}
+          <img
+            src={optionSelected.icon}
+            className="w-[19px] h-[19px]"
+            alt="option_icon"
+          />
+          {optionSelected.option}
         </div>
 
         {open && (
@@ -27,13 +28,12 @@ function LanguageDropdown({dropdownOptions}) {
                 onClick={() => setOptionSelected(dropdownOptions[i])}
                 className="flex flex-row justify-between  cursor-pointer rounded-md py-2"
               >
-                <Flex flexDirection="flex-row" gap="gap-[10px]" className='px-6'>
-                  <img
-                    
-                    src={option.icon}
-                    
-                    alt="option_icon"
-                  />
+                <Flex
+                  flexDirection="flex-row"
+                  gap="gap-[10px]"
+                  className="px-6"
+                >
+                  <img src={option.icon} alt="option_icon" />
                   {option.name}
                 </Flex>
               </div>

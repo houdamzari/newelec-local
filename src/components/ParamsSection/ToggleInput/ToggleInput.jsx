@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function ToggleInput() {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
   return (
     <div className="w-full flex justify-center mt-[25px]">
       <div

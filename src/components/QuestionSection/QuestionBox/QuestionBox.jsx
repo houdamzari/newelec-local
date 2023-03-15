@@ -10,7 +10,7 @@ function QuestionBox({ data }) {
   return (
     <Flex
       className={"bg-[#F8F8F8] rounded-md px-[30px] py-[23px] mt-[17px]"}
-      flexDirection="flex-row"
+      flexDirection="flex-row xs:flex-col"
       justifyContent="justify-between"
       gap={"gap-[38px]"}
     >
@@ -63,7 +63,7 @@ function QuestionBox({ data }) {
           </div>
         </Card>
       </Flex>
-      <div className="w-[294px]">
+      <div className="w-[294px] xs:w-full">
         <Flex
           flexDirection="flex-row"
           justifyContent="justify-between"
@@ -72,7 +72,7 @@ function QuestionBox({ data }) {
           <p className="text-sm text-textColor-grey">Question Image</p>
           <p className="text-xs text-[#B6B6B6]">Optional</p>
         </Flex>
-        <FileInput className={"py-[40px] mt-2"} />
+        <FileInput className={"py-[40px] xs:w-full xs:px-0 mt-2"} />
       </div>
     </Flex>
   );

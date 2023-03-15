@@ -15,6 +15,7 @@ import {
 import { Link, useLocation } from "react-router-dom";
 import { LanguageDropdown, SettingsDropdown, Flex } from "../../components";
 import useClickOutside from "../../hooks/useClickOutside";
+import MobileNav from "./MobileNav/MobileNav";
 function Navbar() {
   const location = useLocation();
   const ref = useClickOutside(() => setOpen(false));
@@ -50,20 +51,28 @@ function Navbar() {
       flexDirection={"flex-row"}
       justifyContent={"justify-between"}
       alignItems={"items-center"}
+      flexWrap={"flex-wrap"}
       gap={"gap-[10px]"}
-      className=" px-16"
+      className="xs:px-2 px-16 bg-white shadow-lg mobile:py-4"
     >
-      <img src={logo} alt="logo-newelec" className="w-fit " />
+      <div className="flex flex-row gap-2 items-center flex-wrap mobile:w-[200px]">
+        <img src={logo} alt="logo-newelec" className="w-fit " />
+        <div className="mobile:visible desktop:hidden">
+          <SearchBar />
+        </div>
+      </div>
 
       <Flex
         flexDirection={"flex-row"}
         justifyContent={"justify-start"}
         alignItems={"items-center"}
-        className="w-[60%]"
+        className="desktop:w-[60%] mobile:w-fit"
         gap={"gap-8"}
       >
-        <SearchBar />
-        <ul className="flex flex-row items-center gap-4 w-fit ">
+        <div className="mobile:hidden w-[46%] desktop:visible">
+          <SearchBar />
+        </div>
+        <ul className="flex flex-row items-center gap-4 w-fit flex-wrap mobile:hidden ">
           {routes.map((element) => (
             <li key={element.path}>
               <Link to={element.path}>
@@ -101,9 +110,11 @@ function Navbar() {
         flexDirection={"flex-row"}
         justifyContent={"justify-between"}
         alignItems={"items-center"}
+        className="w-fit"
         gap={"gap-[15px]"}
       >
-        <img src={notification} alt="notification" className="w-6" />
+        <MobileNav routes={routes} />
+        <img src={notification} alt="notification" className="w-[15px]" />
         <LanguageDropdown dropdownOptions={languages} />
         <SettingsDropdown dropdownOptions={settings} />
       </Flex>
