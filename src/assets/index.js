@@ -13,3 +13,6 @@ export { default as icon } from "./img/icon.svg";
 export { default as cross } from "./img/cross.svg";
 export { default as arrow } from "./img/arrow.svg";
 export { default as deleteIcon } from "./img/delete.svg";
+export { default as logoutIcon } from "./img/logoutIcon.svg";
+export { default as policies } from "./img/policies.svg";
+export { default as settingsIcon } from "./img/settingsIcon.svg";

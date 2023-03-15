@@ -1,8 +1,10 @@
 import React,{useState} from 'react';
 import Flex from "../Flex/Flex";
+import useClickOutside from "../../hooks/useClickOutside";
 function LanguageDropdown({dropdownOptions}) {
  const [optionSelected, setOptionSelected] = useState(dropdownOptions[0]);
   const [open, setOpen] = useState(false);
+  const ref = useClickOutside(()=> setOpen(false))
   return (
     <div className="w-full">
       <Flex
@@ -10,13 +12,13 @@ function LanguageDropdown({dropdownOptions}) {
         justifyContent={"justify-between"}
         alignItems={"items-center"}
       >
-        dddd
+        
       </Flex>
 
-      <div className="relative">
+      <div className="relative" ref={ref}>
         <div
           onClick={() => setOpen(!open)}
-          className="border-2 cursor-pointer rounded-full  py-2 bg-red-400"
+          className=" cursor-pointer rounded-full w-fit py-2 "
         >
             <img
               className="w-[30px]"
@@ -32,12 +34,13 @@ function LanguageDropdown({dropdownOptions}) {
               <div
                 key={option.name}
                 onClick={() => setOptionSelected(dropdownOptions[i])}
-                className="flex flex-row justify-between border-2 cursor-pointer rounded-md px-4 py-2"
+                className="flex flex-row justify-between  cursor-pointer rounded-md px-4 py-2"
               >
                 <Flex flexDirection="flex-row" gap="gap-[10px]">
                   <img
-                    className="w-[30px]"
+                    
                     src={option.icon}
+                    
                     alt="option_icon"
                   />
                   {option.name}

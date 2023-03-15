@@ -1,7 +1,19 @@
 import SearchBar from "../SearchBar/SearchBar";
-import {logo,notification,germany,english,nederlands,spain,france} from '../../assets'
+import {
+  logo,
+  notification,
+  germany,
+  english,
+  nederlands,
+  spain,
+  france,
+  settingsIcon,
+  policies,
+  logoutIcon,
+} from "../../assets";
 import { Link } from "react-router-dom";
 import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
+import SettingsDropdown from "../SettingsDropdown/SettingsDropdown";
 
 function Navbar() {
   const languages = [
@@ -11,33 +23,41 @@ function Navbar() {
     { icon: spain, name: "Espanol(ES)" },
     { icon: germany, name: "Deutsch(DE)" },
   ];
+  const settings = [
+    { icon: settingsIcon, name: "Profile settings" },
+    { icon: policies, name: "Our policies" },
+  ];
   const routes = [
-   
     {
-      path: 'dashboard',
-      name:'Dashboard'
-    },
-     {
-      path: '/',
-      name:'Trainings'
+      path: "dashboard",
+      name: "Dashboard",
     },
     {
-      path: '/users',
-      name:'Users'
+      path: "/",
+      name: "Trainings",
     },
-
-  ]
-  return (<nav className=" flex flex-row items-center justify-between p-2">
-    <img src={logo} alt="logo-newelec" />
-    <SearchBar />
-    <ul className="flex flex-row items-center justify-center gap-4">
-      {routes.map(element => (<li key={element}><Link to={element.path}>{element.name}</Link></li>))}
-      <li>More</li>
-
-    </ul>
-    <img src={notification} alt="notification" />
-   <LanguageDropdown dropdownOptions={languages} />
-  </nav>);
+    {
+      path: "/users",
+      name: "Users",
+    },
+  ];
+  return (
+    <nav className=" flex flex-row items-center justify-between py-2 px-48 bg-red-500">
+      <img src={logo} alt="logo-newelec" />
+      <SearchBar />
+      <ul className="flex flex-row items-center justify-center gap-4">
+        {routes.map((element) => (
+          <li key={element.path}>
+            <Link to={element.path}>{element.name}</Link>
+          </li>
+        ))}
+        <li>More</li>
+      </ul>
+      <img src={notification} alt="notification" />
+      <LanguageDropdown dropdownOptions={languages} />
+      <SettingsDropdown dropdownOptions={settings} />
+    </nav>
+  );
 }
 
 export default Navbar;
