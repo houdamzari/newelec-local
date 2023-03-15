@@ -8,7 +8,7 @@ function ParamsSection() {
     <div className="w-full flex justify-center">
       <Swiper className="w-[1181px]" spaceBetween={20} slidesPerView={6}>
         {data.map((el) => (
-          <SwiperSlide key={el.label}>
+          <SwiperSlide className="w-full" key={el.label}>
             <ParamCard data={el} />
           </SwiperSlide>
         ))}
