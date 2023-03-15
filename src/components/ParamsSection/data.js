@@ -2,7 +2,7 @@ import { dice, clock, check, cam, chart, lapsed } from "../../assets";
 export const data = [
   {
     icon: dice,
-    label: "Random question",
+    label: "Random",
     info: "Number of random questions",
     toggle: false,
   },

@@ -25,7 +25,7 @@ function QuestionSection() {
         </p>
         <hr className="mt-[17px]" />
         {data.map((question) => (
-          <QuestionBox data={question} />
+          <QuestionBox data={question} key={question.id}/>
         ))}
 
         <button className="w-full text-textColor-blue bg-[#E1EFFF] text-center py-[13px] rounded-md mt-[17px]">
