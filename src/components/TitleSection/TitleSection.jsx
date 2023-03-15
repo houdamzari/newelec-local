@@ -5,7 +5,7 @@ function TitleSection() {
   return (
     <Flex justifyContent={"justify-center"} alignItems={"align-center"}>
       <Flex
-        className={"w-[1140px]"}
+        className={"w-[1180px]"}
         flexDirection={"flex-row"}
         justifyContent={"justify-between"}
         alignItems={"items-center"}

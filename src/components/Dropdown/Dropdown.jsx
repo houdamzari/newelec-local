@@ -28,7 +28,9 @@ function Dropdown({
       >
         <p className="text-textColor-grey">{label}</p>
         {addNewAvailable && <p className="text-textColor-blue">Add new+</p>}
-        {optional && <p className="text-textColor-lightGrey">Optional</p>}
+        {optional && (
+          <p className="text-textColor-lightGrey text-xs">Optional</p>
+        )}
       </Flex>
 
       <div className="relative mt-[8px]" ref={ref}>

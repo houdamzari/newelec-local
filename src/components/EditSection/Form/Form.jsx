@@ -54,7 +54,7 @@ function Form() {
           gap={"gap-[13px]"}
         >
           <Dropdown
-            className={"w-[167px]"}
+            className={"w-[180px]"}
             label="Departments"
             optional
             dropdownOptions={[
