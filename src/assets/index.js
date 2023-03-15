@@ -27,3 +27,4 @@ export { default as minus } from "./img/mines.svg";
 export { default as plus } from "./img/plus.svg";
 export { default as left } from "./img/left.svg";
 export { default as right } from "./img/right.svg";
+export { default as greyArrow } from "./img/greyArrow.svg";
