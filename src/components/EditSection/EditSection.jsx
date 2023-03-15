@@ -1,9 +1,6 @@
 import React from "react";
-import Flex from "../Flex/Flex";
-import Form from "./Form/Form";
-import ImageForm from "./ImageForm/ImageForm";
-import FileForm from "./FileForm/FileForm";
-import Card from "../Card/Card";
+import {Card,Flex,FileForm,ImageForm,Form,} from "../../components";
+
 function EditSection() {
   const cards = [<Form />, <ImageForm />, <FileForm />];
   return (

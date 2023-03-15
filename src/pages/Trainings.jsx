@@ -1,10 +1,21 @@
 import React from 'react';
-
+import {
+  TitleSection,
+  EditSection,
+  QuestionSection,
+  Container,
+  ParamsSection,
+} from "../components";
 function Trainings(props) {
   return (
-    <div>
-      Trainings
-    </div>
+    <>
+      <Container>
+        <TitleSection />
+        <EditSection />
+        <QuestionSection />
+        <ParamsSection />
+      </Container>
+    </>
   );
 }
 

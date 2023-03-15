@@ -1,16 +1,11 @@
 import { useState } from "react";
 import SearchBar from "../SearchBar/SearchBar";
-import { logo, notification, germany, english, nederlands, spain, france, settingsIcon, policies, greyArrow ,arrow} from '../../assets'
-import { Link } from "react-router-dom";
-import LanguageDropdown from "../LanguageDropdown/LanguageDropdown";
-import SettingsDropdown from "../SettingsDropdown/SettingsDropdown";
-import Flex from "../Flex/Flex";
-import Dropdown from "../Dropdown/Dropdown";
+import { logo, notification, germany, english, nederlands, spain, france, settingsIcon, policies, greyArrow } from '../../assets'
+import { Link,useLocation } from "react-router-dom";
+import {LanguageDropdown,SettingsDropdown,Flex} from "../../components";
 import useClickOutside from "../../hooks/useClickOutside";
-import { useLocation } from "react-router-dom";
 function Navbar() {
   const location = useLocation();
-  console.log(location.pathname)
   const ref = useClickOutside(()=> setOpen(false))
   const languages = [
     { icon: english, name: "English(EN)" },
