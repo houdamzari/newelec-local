@@ -6,22 +6,14 @@ function LanguageDropdown({dropdownOptions}) {
   const [open, setOpen] = useState(false);
   const ref = useClickOutside(()=> setOpen(false))
   return (
-    <div className="w-full">
-      <Flex
-        flexDirection={"flex-row"}
-        justifyContent={"justify-between"}
-        alignItems={"items-center"}
-      >
-        
-      </Flex>
-
-      <div className="relative" ref={ref}>
+    <div className="w-fit ">
+      <div className="relative w-fit" ref={ref}>
         <div
           onClick={() => setOpen(!open)}
           className=" cursor-pointer rounded-full w-fit py-2 "
         >
             <img
-              className="w-[30px]"
+               className="w-[42px]"
               src={optionSelected.icon}
               alt="option_icon"
             />
@@ -29,14 +21,14 @@ function LanguageDropdown({dropdownOptions}) {
         </div>
 
         {open && (
-          <div className="absolute top-[40px] w-full bg-white left-0">
+          <div className="absolute top-[60px] w-fit rounded bg-white left-0">
             {dropdownOptions.map((option, i) => (
               <div
                 key={option.name}
                 onClick={() => setOptionSelected(dropdownOptions[i])}
-                className="flex flex-row justify-between  cursor-pointer rounded-md px-4 py-2"
+                className="flex flex-row justify-between  cursor-pointer rounded-md py-2"
               >
-                <Flex flexDirection="flex-row" gap="gap-[10px]">
+                <Flex flexDirection="flex-row" gap="gap-[10px]" className='px-6'>
                   <img
                     
                     src={option.icon}

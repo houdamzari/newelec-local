@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import Flex from "../Flex/Flex";
 import useClickOutside from "../../hooks/useClickOutside";
-function Dropdown({ label, addNewAvailable, optional, dropdownOptions }) {
+function Dropdown({ label, addNewAvailable, optional, dropdownOptions,dropdownIcon }) {
   const [optionSelected, setOptionSelected] = useState(dropdownOptions[0]);
   const [open, setOpen] = useState(false);
   const ref = useClickOutside(() => setOpen(false));
@@ -49,11 +49,12 @@ function Dropdown({ label, addNewAvailable, optional, dropdownOptions }) {
                 className="flex flex-row justify-between  cursor-pointer rounded-md px-4 py-2"
               >
                 <Flex flexDirection="flex-row" gap="gap-[10px]">
-                  <img
+                  {icon &&  <img
                     className="w-[30px]"
                     src={option.icon}
                     alt="option_icon"
-                  />
+                  />}
+                 
                   {option.option}
                 </Flex>
               </div>
