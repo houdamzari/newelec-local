@@ -1,6 +1,6 @@
 import React from "react";
-import FileInput from "../../FileInput/FileInput";
-import Flex from "../../Flex/Flex";
+import {FileInput,Flex} from "../../../components";
+
 function FileForm() {
   return (
     <div className="w-[213px] h-[338px]">

@@ -1,8 +1,7 @@
 import React from "react";
-import Dropdown from "../../Dropdown/Dropdown";
-import Flex from "../../Flex/Flex";
 import { FirstForm } from "./data";
-import FormInput from "../../FormInput/FormInput";
+import {FormInput,Flex,Dropdown} from "../../../components";
+
 function Form() {
   return (
     <div>

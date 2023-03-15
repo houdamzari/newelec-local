@@ -14,5 +14,9 @@ export { default as SearchBar } from "./SearchBar/SearchBar";
 export { default as SettingsDropdown } from "./SettingsDropdown/SettingsDropdown";
 export { default as Navbar } from "./Navbar/Navbar";
 export { default as TitleSection } from "./TitleSection/TitleSection";
-export { default as Container } from "./Container/Container";
 export { default as EditSection } from "./EditSection/EditSection";
+export { default as Container } from "./Container/Container";
+export { default as ParamCard } from "./ParamsSection/ParamCard/ParamCard";
+export { default as ToggleInput } from "./ParamsSection/ToggleInput/ToggleInput";
+export { default as NumberInput } from "./ParamsSection/NumberInput/NumberInput";
+
