@@ -16,7 +16,7 @@ function QuestionSection() {
   ];
   return (
     <div className="w-full justify-center flex">
-      <Card className={"w-[1140.2px] px-[24px] py-[18px]"}>
+      <Card className={"w-[1260px] px-[24px] py-[18px]"}>
         <p className="text-sm font-bold text-textColor-grey">Training</p>
         <p className="text-sm mt-[6px]">
           Here you can manage the questions by clicking on the “Add Question”

@@ -11,8 +11,28 @@ function ParamsSection() {
     <div className="w-[full] flex justify-center items-center flex-row">
       <img src={left} alt="left" className="cursor-pointer left-arrow" />
       <Swiper
-        className="w-[1140px] m-0 mx-[14px] pb-4"
+        className="w-[1250px] m-0 mx-[14px] pb-4"
         spaceBetween={20}
+        breakpoints={{
+          1400: {
+            slidesPerView: 6,
+          },
+          1200: {
+            slidesPerView: 5,
+          },
+          900: {
+            slidesPerView: 4,
+          },
+          300: {
+            slidesPerView: 1,
+          },
+          500: {
+            slidesPerView: 2,
+          },
+          600: {
+            slidesPerView: 3,
+          },
+        }}
         slidesPerView={6}
         navigation={{
           prevEl: ".left-arrow",

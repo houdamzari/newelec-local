@@ -15,6 +15,7 @@
 .swiper-slide {
   position: relative;
   z-index: 1;
+  min-width: 176px;
 }
 
 .clip {

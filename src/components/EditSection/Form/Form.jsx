@@ -1,6 +1,6 @@
 import React from "react";
 import { FirstForm } from "./data";
-import {FormInput,Flex,Dropdown} from "../../../components";
+import { FormInput, Flex, Dropdown } from "../../../components";
 
 function Form() {
   return (
@@ -50,10 +50,9 @@ function Form() {
           flexDirection={"flex-col"}
           justifyContent={"justify-center"}
           alignItems={"items-center"}
-          gap={"gap-[13px]"}
+          className={"w-[250px]"}
         >
           <Dropdown
-            className={"w-[180px]"}
             label="Departments"
             optional
             dropdownOptions={[
@@ -67,7 +66,7 @@ function Form() {
             dropdownOptions={[{ option: "function1" }, { option: "function2" }]}
           />
         </Flex>
-        <div>
+        <div className="w-full">
           <p className="text-sm font-semibold text-textColor-grey">
             Description
           </p>
