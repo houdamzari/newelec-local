@@ -3,20 +3,25 @@ import Flex from "../Flex/Flex";
 
 function TitleSection() {
   return (
-    <Flex
-      flexDirection={"flex-row"}
-      justifyContent={"justify-between"}
-      alignItems={"items-center"}
-    >
-      <h1>Edit Training "Working At Height"</h1>
+    <Flex justifyContent={"justify-center"} alignItems={"align-center"}>
       <Flex
+        className={"w-[1180px]"}
         flexDirection={"flex-row"}
-        justifyContent={"justify-center"}
+        justifyContent={"justify-between"}
         alignItems={"items-center"}
-        gap={"gap-[10px]"}
       >
-        <Button secondary />
-        <Button primary />
+        <h1 className="text-lg font-semibold text-[#7C7C7C]">
+          Edit Training "Working At Height"
+        </h1>
+        <Flex
+          flexDirection={"flex-row"}
+          justifyContent={"justify-center"}
+          alignItems={"items-center"}
+          gap={"gap-[25px]"}
+        >
+          <Button secondary />
+          <Button primary />
+        </Flex>
       </Flex>
     </Flex>
   );

@@ -14,6 +14,7 @@ function Navbar() {
     { icon: germany, name: "Deutsch(DE)" },
   ];
   const settings = [
+  const settings = [
     { icon: settingsIcon, name: "Profile settings" },
     { icon: policies, name: "Our policies" },
   ];

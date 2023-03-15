@@ -12,9 +12,10 @@ function EditSection() {
       alignItems={"items-center"}
       justifyContent={"justify-center"}
       gap={"gap-[10px]"}
+      flexWrap={"flex-wrap"}
     >
-      {cards.map((cardContent) => (
-        <Card key={cardContent}>{cardContent}</Card>
+      {cards.map((cardContent, i) => (
+        <Card key={i}>{cardContent}</Card>
       ))}
     </Flex>
   );

@@ -13,31 +13,35 @@ function Dropdown({ label, addNewAvailable, optional, dropdownOptions,dropdownIc
     [optionSelected]
   );
   return (
-    <div className="w-full">
+    <div className={`w-full text-sm font-semibold ${className}`}>
       <Flex
         flexDirection={"flex-row"}
         justifyContent={"justify-between"}
         alignItems={"items-center"}
       >
-        <p>{label}</p>
-        {addNewAvailable && <p>Add new+</p>}
-        {optional && <p>Optional</p>}
+        <p className="text-textColor-grey">{label}</p>
+        {addNewAvailable && <p className="text-textColor-blue">Add new+</p>}
+        {optional && (
+          <p className="text-textColor-lightGrey text-xs">Optional</p>
+        )}
       </Flex>
 
-      <div className="relative" ref={ref}>
+      <div className="relative mt-[8px]" ref={ref}>
         <div
           onClick={() => setOpen(!open)}
-          className="flex flex-row justify-between border-2 cursor-pointer rounded-md px-4 py-2"
+          className="flex flex-row justify-between border-2 cursor-pointer rounded-md px-[12px] py-[9px]"
         >
           <Flex flexDirection="flex-row " gap="gap-[10px]">
-            <img
-              className="w-[30px]"
-              src={optionSelected.icon}
-              alt="option_icon"
-            />
+            {optionSelected.icon && (
+              <img
+                className="w-[20px]"
+                src={optionSelected.icon}
+                alt="option_icon"
+              />
+            )}
             {optionSelected.option}
           </Flex>
-          <p className="rotate-[-90deg] ">&#10094;</p>
+          <img src={arrow} alt="arrow" />
         </div>
 
         {open && (
