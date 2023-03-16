@@ -5,7 +5,7 @@ import Card from "../../Card/Card";
 import FileInput from "../../FileInput/FileInput";
 import Tooltip from "../../Tooltip/Tooltip";
 import Checkbox from "./Checkbox";
-function QuestionBox({ data }) {
+function QuestionBox({ data,deleteQuestions}) {
   const [answer, setAnswer] = useState("True");
   return (
     <Flex
@@ -14,7 +14,7 @@ function QuestionBox({ data }) {
       justifyContent="justify-between"
       gap={"gap-[38px]"}
     >
-      <Flex flexDirection={"flex-col"} gap={"gap-[10px]"}>
+      <Flex flexDirection={"flex-col"} className='w-full'  gap={"gap-[10px]"}>
         <Flex
           flexDirection={"row"}
           justifyContent={"justify-between"}
@@ -25,6 +25,7 @@ function QuestionBox({ data }) {
             className="w-[12px] h-[12px] cursor-pointer"
             src={cross}
             alt="cross"
+            onClick={()=> deleteQuestions(data.id)}
           />
         </Flex>
         <Card className={"px-[10px] py-[8px] w-full text-sm"}>
