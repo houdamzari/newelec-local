@@ -16,7 +16,7 @@ function QuestionSection() {
   ];
   return (
     <div className="flex justify-center">
-      <div className="w-[1250px]">
+      <div className="w-[1100px]">
         <Card className={"w-full xs:w-full px-[24px] py-[18px]"}>
           <p className="text-sm font-bold text-textColor-grey">Training</p>
           <p className="text-sm mt-[6px]">

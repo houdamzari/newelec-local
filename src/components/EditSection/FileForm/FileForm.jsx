@@ -1,9 +1,9 @@
 import React from "react";
-import {FileInput,Flex} from "../../../components";
+import { FileInput, Flex } from "../../../components";
 
 function FileForm() {
   return (
-    <div className="w-[213px] h-[338px]">
+    <div className="w-[177px] h-[311px]">
       <p className="text-sm text-textColor-grey font-semibold">Training file</p>
       <FileInput className={"mt-4 p-[2px]"} />
       <p className="mt-[6px] text-sm text-grey">
@@ -23,7 +23,7 @@ function FileForm() {
         Media URL
       </p>
       <input
-        className="mt-[5px] border-2 rounded-md px-[10px] py-[7px] placeholder:text-sm placeholder:text-grey"
+        className="mt-[5px] w-full border-2 rounded-md px-[10px] py-[7px] placeholder:text-sm placeholder:text-grey"
         type="text"
         placeholder="https://youtu.be/1g4hoZx8-o4"
       />

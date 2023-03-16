@@ -22,10 +22,10 @@ function FileInput({ imageInput, className }) {
           className="absolute cursor-pointer appearance-none opacity-0  w-full h-full top-0 left-0"
         />
         <img src={upload} alt="img-upload" className="w-[50px] " />
-        <p className="text-sm text-grey">
+        <p className="text-[12px] text-[#B5B5B5]">
           Drag and drop your {imageInput ? "image" : "file"} here
         </p>
-        <p className="text-sm text-grey">
+        <p className="text-[12px] text-[#B5B5B5]">
           Or <span className="text-textColor-blue">browse files</span>
         </p>
       </div>

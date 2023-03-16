@@ -8,13 +8,13 @@ import "swiper/css/scrollbar";
 import { left, right } from "../../assets";
 function ParamsSection() {
   return (
-    <div className="w-[full] flex justify-center items-center flex-row">
+    <div className="w-full flex justify-center items-center flex-row">
       <img src={left} alt="left" className="cursor-pointer left-arrow" />
       <Swiper
-        className="w-[1250px] m-0 mx-[14px] pb-4"
+        className="w-[1100px] m-0 mx-[14px] pb-4"
         spaceBetween={20}
         breakpoints={{
-          1400: {
+          1350: {
             slidesPerView: 6,
           },
           1200: {

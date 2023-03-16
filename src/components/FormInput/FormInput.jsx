@@ -5,7 +5,7 @@ import Flex from "../Flex/Flex";
 function FormInput() {
   const [inputValue, setInputValue] = useState("Working at height");
   return (
-    <div className="w-[69%]">
+    <div className="w-[309px] xs:w-full">
       <p className="text-textColor-grey text-sm font-semibold">Training</p>
       <div className="relative border-2 rounded-md px-[12px] py-[9px] mt-[8px] ">
         <input

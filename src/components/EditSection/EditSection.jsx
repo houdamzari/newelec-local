@@ -1,5 +1,5 @@
 import React from "react";
-import {Card,Flex,FileForm,ImageForm,Form,} from "../../components";
+import { Card, Flex, FileForm, ImageForm, Form } from "../../components";
 
 function EditSection() {
   const cards = [<Form />, <ImageForm />, <FileForm />];
@@ -12,7 +12,9 @@ function EditSection() {
       flexWrap={"flex-wrap"}
     >
       {cards.map((cardContent, i) => (
-        <Card key={i}>{cardContent}</Card>
+        <Card className={i === 0 ? "px-[30px]" : ""} key={i}>
+          {cardContent}
+        </Card>
       ))}
     </Flex>
   );

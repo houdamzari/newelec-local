@@ -4,7 +4,7 @@ import { FormInput, Flex, Dropdown } from "../../../components";
 
 function Form() {
   return (
-    <div className="h-[338px]">
+    <div className="h-[311px] w-[485px] xs:w-full xs:h-fit">
       <Flex
         className="w-full"
         flexDirection={"flex-row"}
@@ -31,7 +31,7 @@ function Form() {
       >
         <FormInput />
         <Dropdown
-          className="w-[35%]"
+          className="w-[167px] xs:w-full"
           label="Assign To"
           dropdownOptions={[
             { option: "internal worker" },
@@ -50,7 +50,7 @@ function Form() {
           flexDirection={"flex-col"}
           justifyContent={"justify-center"}
           alignItems={"items-center"}
-          className={"w-[250px]"}
+          className={"w-[167px]"}
         >
           <Dropdown
             label="Departments"
@@ -66,7 +66,7 @@ function Form() {
             dropdownOptions={[{ option: "function1" }, { option: "function2" }]}
           />
         </Flex>
-        <div className="w-full">
+        <div className="w-[304px] xs:w-full">
           <p className="text-sm font-semibold text-textColor-grey">
             Description
           </p>
